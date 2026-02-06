@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export default function TabBar({ tabs, activeTab }) {
+export default function TabBar({ tabs, activeTab, onSelect }) {
   return (
     <div className="tab-bar" role="tablist" aria-label="Game tabs">
       {tabs.map((tab) => (
@@ -9,6 +9,7 @@ export default function TabBar({ tabs, activeTab }) {
           className={`tab${tab === activeTab ? ' tab--active' : ''}`}
           role="tab"
           aria-selected={tab === activeTab}
+          onClick={() => onSelect(tab)}
           type="button"
         >
           {tab}
@@ -21,4 +22,5 @@ export default function TabBar({ tabs, activeTab }) {
 TabBar.propTypes = {
   tabs: PropTypes.arrayOf(PropTypes.string).isRequired,
   activeTab: PropTypes.string.isRequired,
+  onSelect: PropTypes.func.isRequired,
 };

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paperplay Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-nav">
+        <div class="brand">
+          <span class="brand__icon">🎲</span>
+          <div>
+            <p class="brand__name">Paperplay</p>
+            <span class="brand__tagline">Play together, anywhere.</span>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <button class="ghost">Discover</button>
+          <button class="ghost">Schedule</button>
+          <button class="ghost">Store</button>
+        </nav>
+        <div class="profile">
+          <div class="profile__avatar">JS</div>
+          <div>
+            <p class="profile__name">Juno Sparks</p>
+            <span class="profile__status">Ready to play</span>
+          </div>
+        </div>
+      </header>
+      <main class="main-grid">
+        <section class="content">
+          <div class="content__header">
+            <div>
+              <p class="eyebrow">Welcome to Paperplay</p>
+              <h1>Pick a table and jump in.</h1>
+            </div>
+            <button class="cta">Create lobby</button>
+          </div>
+          <div class="tab-bar" role="tablist" aria-label="Game tabs">
+            <button class="tab tab--active" role="tab" aria-selected="true" type="button">
+              Fold City
+            </button>
+            <button class="tab" role="tab" aria-selected="false" type="button">Riff Rally</button>
+            <button class="tab" role="tab" aria-selected="false" type="button">Skyline Scribble</button>
+            <button class="tab" role="tab" aria-selected="false" type="button">Questline</button>
+            <button class="tab" role="tab" aria-selected="false" type="button">Orbit Ops</button>
+          </div>
+          <div class="game-grid">
+            <article class="game-panel game-panel--active">
+              <div class="game-panel__top">
+                <div class="icon-orb" style="--icon-accent: var(--coral)">
+                  <span class="icon-orb__emoji" aria-hidden="true">♠️</span>
+                </div>
+                <div>
+                  <h3>Fold City</h3>
+                  <p class="game-panel__desc">Fast-paced card battles with neon boosters.</p>
+                </div>
+              </div>
+              <div class="game-panel__meta">
+                <span class="pill">Open tables</span>
+                <span class="meta">1.2k players</span>
+              </div>
+              <button class="primary">Join lobby</button>
+            </article>
+            <article class="game-panel">
+              <div class="game-panel__top">
+                <div class="icon-orb" style="--icon-accent: var(--sunburst)">
+                  <span class="icon-orb__emoji" aria-hidden="true">🎸</span>
+                </div>
+                <div>
+                  <h3>Riff Rally</h3>
+                  <p class="game-panel__desc">Music-inspired rounds and combo multipliers.</p>
+                </div>
+              </div>
+              <div class="game-panel__meta">
+                <span class="pill">Live tournament</span>
+                <span class="meta">860 players</span>
+              </div>
+              <button class="primary">Join lobby</button>
+            </article>
+            <article class="game-panel">
+              <div class="game-panel__top">
+                <div class="icon-orb" style="--icon-accent: var(--sky)">
+                  <span class="icon-orb__emoji" aria-hidden="true">✍️</span>
+                </div>
+                <div>
+                  <h3>Skyline Scribble</h3>
+                  <p class="game-panel__desc">Draw, guess, and build out the skyline.</p>
+                </div>
+              </div>
+              <div class="game-panel__meta">
+                <span class="pill">Party mode</span>
+                <span class="meta">430 players</span>
+              </div>
+              <button class="primary">Join lobby</button>
+            </article>
+            <article class="game-panel">
+              <div class="game-panel__top">
+                <div class="icon-orb" style="--icon-accent: var(--mint)">
+                  <span class="icon-orb__emoji" aria-hidden="true">🧭</span>
+                </div>
+                <div>
+                  <h3>Questline</h3>
+                  <p class="game-panel__desc">Co-op quests with animated story cards.</p>
+                </div>
+              </div>
+              <div class="game-panel__meta">
+                <span class="pill">New chapters</span>
+                <span class="meta">520 players</span>
+              </div>
+              <button class="primary">Join lobby</button>
+            </article>
+            <article class="game-panel">
+              <div class="game-panel__top">
+                <div class="icon-orb" style="--icon-accent: var(--violet)">
+                  <span class="icon-orb__emoji" aria-hidden="true">🪐</span>
+                </div>
+                <div>
+                  <h3>Orbit Ops</h3>
+                  <p class="game-panel__desc">Strategize through cosmic missions.</p>
+                </div>
+              </div>
+              <div class="game-panel__meta">
+                <span class="pill">Ranked draft</span>
+                <span class="meta">970 players</span>
+              </div>
+              <button class="primary">Join lobby</button>
+            </article>
+          </div>
+        </section>
+        <aside class="lobby-grid">
+          <h2>Lobby highlights</h2>
+          <div class="lobby-grid__items">
+            <article class="lobby-card">
+              <div class="lobby-card__accent" style="--accent: var(--mint)"></div>
+              <div>
+                <p class="lobby-card__title">Players online</p>
+                <p class="lobby-card__value">3,984</p>
+                <p class="lobby-card__detail">Across all five lobbies right now.</p>
+              </div>
+            </article>
+            <article class="lobby-card">
+              <div class="lobby-card__accent" style="--accent: var(--sunburst)"></div>
+              <div>
+                <p class="lobby-card__title">Daily boosts</p>
+                <p class="lobby-card__value">2x XP</p>
+                <p class="lobby-card__detail">Complete any match to claim rewards.</p>
+              </div>
+            </article>
+            <article class="lobby-card">
+              <div class="lobby-card__accent" style="--accent: var(--violet)"></div>
+              <div>
+                <p class="lobby-card__title">Community quests</p>
+                <p class="lobby-card__value">12 live</p>
+                <p class="lobby-card__detail">Join a crew and climb the ladder.</p>
+              </div>
+            </article>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>

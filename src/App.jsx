@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import AppShell from './components/AppShell.jsx';
 import GamePanel from './components/GamePanel.jsx';
 import LobbyGrid from './components/LobbyGrid.jsx';
@@ -68,6 +69,8 @@ const lobbyPanels = [
 ];
 
 export default function App() {
+  const [activeTab, setActiveTab] = useState(games[0].name);
+
   return (
     <AppShell>
       <section className="content">
@@ -78,10 +81,10 @@ export default function App() {
           </div>
           <button className="cta">Create lobby</button>
         </div>
-        <TabBar tabs={games.map((game) => game.name)} activeTab={games[0].name} />
+        <TabBar tabs={games.map((game) => game.name)} activeTab={activeTab} onSelect={setActiveTab} />
         <div className="game-grid">
           {games.map((game) => (
-            <GamePanel key={game.name} game={game} />
+            <GamePanel key={game.name} game={game} isActive={game.name === activeTab} />
           ))}
         </div>
       </section>

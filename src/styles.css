@@ -185,6 +185,11 @@ h1 {
   box-shadow: 0 18px 32px rgba(28, 22, 53, 0.12);
 }
 
+.game-panel--active {
+  box-shadow: 0 20px 36px rgba(122, 92, 255, 0.25);
+  border: 1px solid rgba(122, 92, 255, 0.2);
+}
+
 .game-panel__top {
   display: flex;
   gap: 14px;
@@ -255,6 +260,7 @@ h1 {
 .lobby-grid__items {
   display: grid;
   gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .lobby-card {
